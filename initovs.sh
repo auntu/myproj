@@ -11,7 +11,9 @@ if [[ $(grep -c 'stack ALL=(ALL) NOPASSWD: ALL' /etc/sudoers)  -eq 0 ]]; then
 	echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 fi
 
-apt-get -y install openvswitch-switch openvswitch-common openvswitch-controller
+if [ ! -f /etc/init.d/openvswitch-switch ]; then
+	apt-get -y install openvswitch-switch openvswitch-common openvswitch-controller
+fi
 
 pushd /root/
 wget http://openvswitch.org/releases/openvswitch-2.3.3.tar.gz
