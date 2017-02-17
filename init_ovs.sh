@@ -5,9 +5,8 @@ if [[ $(whoami)  != 'root' ]]; then
 	exit;
 fi
 
-apt-get update -y && apt-get upgrade -y && apt-get dist-upgrade -y
+apt-get update -y && apt-get upgrade -y 
 apt-get install sudo -y || yum install -y sudo
-apt-get install git -y || sudo yum install -y git
 
 if [[ $(grep -c 'stack ALL=(ALL) NOPASSWD: ALL' /etc/sudoers)  -eq 0 ]]; then 
 	echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
