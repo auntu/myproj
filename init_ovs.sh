@@ -6,7 +6,6 @@ if [[ $(whoami)  != 'root' ]]; then
 fi
 
 apt-get update -y && apt-get upgrade -y 
-apt-get install sudo -y || yum install -y sudo
 
 if [[ $(grep -c 'stack ALL=(ALL) NOPASSWD: ALL' /etc/sudoers)  -eq 0 ]]; then 
 	echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
