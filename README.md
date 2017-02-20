@@ -12,8 +12,8 @@ Run the init_ovs.sh bash script
 :~$ sudo su   
 :~$ ./myproj/initovs.sh
 
-[If there is an error: /bin/bash^M: bad interpreter: No such file or directory then use the following command]
-:~$ sed -i -e 's/\r$//' myproj/initovs.sh
-
+[If there is an error: **/bin/bash^M: bad interpreter: No such file or directory** then use the following command]  
+:~$ sed -i -e 's/\r$//' myproj/initovs.sh   
+:~$ ./myproj/initovs.sh
 
 Initial Configuration is done!
