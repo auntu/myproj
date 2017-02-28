@@ -7,13 +7,9 @@ Install Github
 Download myproj file from   
 :~$ git clone https://github.com/auntu/myproj.git
 
-Run the init_ovs.sh bash script   
-:~$ chmod 755 myproj/initovs.sh   
+Run the initovs.sh bash script   
+:~$ chmod 750 myproj/initovs.sh   
 :~$ sudo su   
-:~$ ./myproj/initovs.sh
-
-[If there is an error: **/bin/bash^M: bad interpreter: No such file or directory** then use the following command]  
-:~$ sed -i -e 's/\r$//' myproj/initovs.sh   
 :~$ ./myproj/initovs.sh
 
 Initial Configuration is done!
