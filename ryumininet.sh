@@ -7,14 +7,10 @@ sudo pip install setuptools --upgrade
 
 echo "Step 2: Clone RYU from git Repo and Installing Ryu"
 git clone --depth=1 https://github.com/auntu/ryu.git
-#git clone https://github.com/auntu/ryu.git -b v3.17 ryu
-cd ryu; git checkout -b v3.17 v3.17
-sudo python ./setup.py install
-cd~
+sudo python ./ryu/setup.py install
 
 echo "Step 3. Install and Update python packages"
 sudo pip install six --upgrade
-#sudo pip install -r ryu/tools/pip-requires
 sudo pip install oslo.config msgpack-python tinyrpc
 sudo pip install eventlet --upgrade
 
