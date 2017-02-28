@@ -8,6 +8,7 @@ sudo pip install setuptools --upgrade
 echo "Step 2: Clone RYU from git Repo and Installing Ryu"
 git clone --depth=1 https://github.com/auntu/ryu.git
 cd /home/stack/ryu && sudo python setup.py install
+cd ~
 
 echo "Step 3. Install and Update python packages"
 sudo pip install six --upgrade
