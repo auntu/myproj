@@ -16,7 +16,7 @@ sudo pip install eventlet --upgrade
 
 echo "Step 4. Test ryu-manager"
 cd /home/stack/ryu && ./bin/ryu-manager --version
-cd~
+cd ~
 
 #echo "Step 5. Installing Mininet"
 #git clone git://github.com/mininet/mininet
