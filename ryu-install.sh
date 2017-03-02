@@ -6,9 +6,11 @@ sudo apt-get -y install python-eventlet python-routes python-webob python-parami
 sudo pip install setuptools --upgrade
 
 echo "Step 2: Clone RYU from git Repo and Installing Ryu"
-git clone --depth=1 https://github.com/auntu/ryu.git
-cd /home/stack/ryu && sudo python setup.py install
-cd ~
+if ! ./ryu/bin/ryu-manager --version &>/dev/null ; then
+  if [ ! -d /home/$(whoami)/ryu ]; then
+    git clone --depth=1 https://github.com/auntu/ryu.git
+  fi
+sudo python ryu/setup.py install
 
 echo "Step 3. Install and Update python packages"
 sudo pip install six --upgrade
