@@ -9,10 +9,11 @@
 ##echo "Step 2. Testing Mininet"
 ##sudo mn --test pingall
 ##sudo mn -c
-##
-##sudo apt-get -y install idle
-##sudo apt-get -y install wireshark
-##sudo wireshark &
+
+echo "Step 3. Installing Idle & Wireshark"
+sudo apt-get -y install idle
+sudo apt-get -y install wireshark
+sudo wireshark &
 
 echo "Run topology"
 
