@@ -10,7 +10,8 @@ if ! ./ryu/bin/ryu-manager --version &>/dev/null ; then
   if [ ! -d /home/$(whoami)/ryu ]; then
     git clone --depth=1 https://github.com/auntu/ryu.git
   fi
-sudo python ryu/setup.py install
+  sudo python ryu/setup.py install
+fi
 
 echo "Step 3. Install and Update python packages"
 sudo pip install six --upgrade
@@ -18,5 +19,4 @@ sudo pip install oslo.config msgpack-python tinyrpc
 sudo pip install eventlet --upgrade
 
 echo "Step 4. Test ryu-manager"
-cd /home/stack/ryu && ./bin/ryu-manager --version
-cd ~
+./ryu/bin/ryu-manager --version
