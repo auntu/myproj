@@ -18,13 +18,3 @@ sudo pip install eventlet --upgrade
 echo "Step 4. Test ryu-manager"
 cd /home/stack/ryu && ./bin/ryu-manager --version
 cd ~
-
-#echo "Step 5. Installing Mininet"
-#git clone git://github.com/mininet/mininet
-#cd mininet; git checkout -b 2.2.1 2.2.1
-#./util/install.sh -nf3
-#cd~
-
-#echo "Step 6. Testing Mininet"
-#sudo mn --test pingall
-#sudo mn -c
