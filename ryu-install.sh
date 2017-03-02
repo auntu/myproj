@@ -10,7 +10,8 @@ if ! ./ryu/bin/ryu-manager --version &>/dev/null ; then
   if [ ! -d /home/$(whoami)/ryu ]; then
     git clone --depth=1 https://github.com/auntu/ryu.git
   fi
-  sudo python ryu/setup.py install
+  cd /home/$(whoami)/ryu && sudo python setup.py install
+  cd ~
 fi
 
 echo "Step 3. Install and Update python packages"
